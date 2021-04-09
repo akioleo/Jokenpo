@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Jokenpo</title>
+
+
+	<style>
+
+	* {
+		font-family: Helvetica Neue, Helvetica, Arial;
+		font-weight: 400;
+		cursor: default;
+	}
+
+	#principal {
+	}
+
+	#titulo  {
+		text-align: center;
+		color: #2d3436;
+	}
+
+	#placar {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	#jogador, #computador {
+		position: relative;
+		flex-grow: 1;
+		border-radius: 5px;
+		color: #fff;
+		padding: 20px;
+	}
+
+	#jogador h2, #computador h2  {
+		padding: 0;
+		margin: 0;
+	}
+
+
+	#jogador {
+		background-color: #ff7675;
+	}
+
+	#jogador-nome, #computador-nome  {
+		font-size: 24px;
+	}
+
+	#computador-nome  {
+		text-align: right;
+	}
+
+	#jogador-pontos  {
+		right: 20px;
+	}
+
+	#jogador-pontos, #computador-pontos  {
+		font-size: 52px;
+		position: absolute;
+		top: 8px;
+	}
+
+	#jogador #jogador-escolha, #computador #computador-escolha  {
+		list-style: none;
+		text-align: center;
+		margin: 30 0 0;
+		padding: 0;
+	}
+	#jogador #jogador-escolha li, #computador #computador-escolha li {
+		display: inline;
+		padding: 0 15px;
+	}
+	#jogador #jogador-escolha a, #computador #computador-escolha a {
+		opacity: .2;
+	}
+	#jogador #jogador-escolha a:hover  {
+		opacity: 1;	
+	}
+
+	#jogador #jogador-escolha img, #computador #computador-escolha img  {
+		max-width: 80px;
+
+	}
+
+	#versus {
+		font-size: 80px;
+		padding: 0 40px;
+		}
+
+	#computador {
+		background-color: #3498db;
+	}
+
+	#mensagem {
+		background-color: #a3a375;
+		border-radius: 5px;
+		font-size: 24px;
+		color: #fff;
+		margin: 20px 0;
+		padding: 20px;
+		text-align: center;
+	}
+	</style>
+</head>
+	<body>
+		<div id="principal">
+		<h1 id="titulo"> 
+			Pedra, Papel, Tesoura
+		</div>
+
+		<div id ="placar"> 
+			<div id="jogador">
+				<h2 id="jogador-nome"> Leo </h2>
+				<span id="jogador-pontos">0</span>
+				<ul id="jogador-escolha">
+					<li><a id="jogador-escolha-1"><img src="img/pedra.png"></a></li>
+					<li><a id="jogador-escolha-2"><img src="img/papel.png"></a></li>
+					<li><a id="jogador-escolha-3"><img src="img/tesoura.png"></a></li>
+				</ul>
+			</div>
+
+			<div id="versus">
+				vs
+			</div>
+
+			<div id="computador">
+				<h2 id="computador-nome"> Computador </h2>
+				<span id="computador-pontos">0</span>
+				<ul id="computador-escolha">
+					<li><a id="computador-escolha-1"><img src="img/pedra.png"></a></li>
+					<li><a id="computador-escolha-2"><img src="img/papel.png"></a></li>
+					<li><a id="computador-escolha-3"><img src="img/tesoura.png"></a></li>
+			</div>
+		</div>
+
+		<div id="mensagem">
+				Olá
+		</div>
+
+		<script>
+			var nomeJogador;
+
+			document.getElementById('jogador-escolha-1').onclick = function() {};
+			document.getElementById('jogador-escolha-2').onclick = function() {};
+			document.getElementById('jogador-escolha-3').onclick = function() {};
+
+			nomeJogador = prompt("Qual é o seu nome?");
+			documet.getElementById('mensagem').innerHTML = nomeJogador;
+		</script>
+	</body>
+</html>
